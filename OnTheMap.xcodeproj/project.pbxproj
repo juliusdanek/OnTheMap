@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		181656EB1B3B6FBD007A9387 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181656EA1B3B6FBD007A9387 /* AppDelegate.swift */; };
+		181656ED1B3B6FBD007A9387 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181656EC1B3B6FBD007A9387 /* LogInVC.swift */; };
+		181656F01B3B6FBD007A9387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181656EE1B3B6FBD007A9387 /* Main.storyboard */; };
+		181656F21B3B6FBD007A9387 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181656F11B3B6FBD007A9387 /* Images.xcassets */; };
+		181656F51B3B6FBD007A9387 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181656F31B3B6FBD007A9387 /* LaunchScreen.xib */; };
+		181657011B3B6FBD007A9387 /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181657001B3B6FBD007A9387 /* OnTheMapTests.swift */; };
+		1816570D1B3B767F007A9387 /* OTMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816570C1B3B767F007A9387 /* OTMClient.swift */; };
+		1816570F1B3B7D63007A9387 /* OTMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816570E1B3B7D63007A9387 /* OTMConstants.swift */; };
+		18EE6B161B3B9C6A00B7F151 /* OTMUdacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE6B151B3B9C6A00B7F151 /* OTMUdacity.swift */; };
+		18EE6B181B3C7DA400B7F151 /* OTMConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE6B171B3C7DA400B7F151 /* OTMConvenience.swift */; };
+		18EE6B1B1B3C9CF800B7F151 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EE6B1A1B3C9CF800B7F151 /* FBSDKCoreKit.framework */; };
+		18EE6B1E1B3CB51A00B7F151 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EE6B1D1B3CB51A00B7F151 /* FBSDKLoginKit.framework */; };
+		18EE6B201B3CB55600B7F151 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EE6B1F1B3CB55600B7F151 /* Bolts.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		181656FB1B3B6FBD007A9387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 181656DD1B3B6FBD007A9387 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 181656E41B3B6FBD007A9387;
+			remoteInfo = OnTheMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		181656E51B3B6FBD007A9387 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		181656E91B3B6FBD007A9387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181656EA1B3B6FBD007A9387 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		181656EC1B3B6FBD007A9387 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
+		181656EF1B3B6FBD007A9387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		181656F11B3B6FBD007A9387 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		181656F41B3B6FBD007A9387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		181656FA1B3B6FBD007A9387 /* OnTheMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		181656FF1B3B6FBD007A9387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181657001B3B6FBD007A9387 /* OnTheMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTests.swift; sourceTree = "<group>"; };
+		1816570C1B3B767F007A9387 /* OTMClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMClient.swift; sourceTree = "<group>"; };
+		1816570E1B3B7D63007A9387 /* OTMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMConstants.swift; sourceTree = "<group>"; };
+		18EE6B151B3B9C6A00B7F151 /* OTMUdacity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMUdacity.swift; sourceTree = "<group>"; };
+		18EE6B171B3C7DA400B7F151 /* OTMConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMConvenience.swift; sourceTree = "<group>"; };
+		18EE6B1A1B3C9CF800B7F151 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		18EE6B1C1B3CB1BD00B7F151 /* fb-bridge-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fb-bridge-header.h"; sourceTree = "<group>"; };
+		18EE6B1D1B3CB51A00B7F151 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		18EE6B1F1B3CB55600B7F151 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		181656E21B3B6FBD007A9387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EE6B201B3CB55600B7F151 /* Bolts.framework in Frameworks */,
+				18EE6B1E1B3CB51A00B7F151 /* FBSDKLoginKit.framework in Frameworks */,
+				18EE6B1B1B3C9CF800B7F151 /* FBSDKCoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181656F71B3B6FBD007A9387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		181656DC1B3B6FBD007A9387 = {
+			isa = PBXGroup;
+			children = (
+				181656E71B3B6FBD007A9387 /* OnTheMap */,
+				181656FD1B3B6FBD007A9387 /* OnTheMapTests */,
+				181656E61B3B6FBD007A9387 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		181656E61B3B6FBD007A9387 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				181656E51B3B6FBD007A9387 /* OnTheMap.app */,
+				181656FA1B3B6FBD007A9387 /* OnTheMapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		181656E71B3B6FBD007A9387 /* OnTheMap */ = {
+			isa = PBXGroup;
+			children = (
+				18EE6B1C1B3CB1BD00B7F151 /* fb-bridge-header.h */,
+				18EE6B191B3C9CEC00B7F151 /* Frameworks */,
+				1816570B1B3B7611007A9387 /* Model */,
+				181656EA1B3B6FBD007A9387 /* AppDelegate.swift */,
+				1816570A1B3B6FD8007A9387 /* VCs */,
+				181656EE1B3B6FBD007A9387 /* Main.storyboard */,
+				181656F11B3B6FBD007A9387 /* Images.xcassets */,
+				181656F31B3B6FBD007A9387 /* LaunchScreen.xib */,
+				181656E81B3B6FBD007A9387 /* Supporting Files */,
+			);
+			path = OnTheMap;
+			sourceTree = "<group>";
+		};
+		181656E81B3B6FBD007A9387 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				181656E91B3B6FBD007A9387 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		181656FD1B3B6FBD007A9387 /* OnTheMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				181657001B3B6FBD007A9387 /* OnTheMapTests.swift */,
+				181656FE1B3B6FBD007A9387 /* Supporting Files */,
+			);
+			path = OnTheMapTests;
+			sourceTree = "<group>";
+		};
+		181656FE1B3B6FBD007A9387 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				181656FF1B3B6FBD007A9387 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1816570A1B3B6FD8007A9387 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				181656EC1B3B6FBD007A9387 /* LogInVC.swift */,
+			);
+			name = VCs;
+			sourceTree = "<group>";
+		};
+		1816570B1B3B7611007A9387 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1816570C1B3B767F007A9387 /* OTMClient.swift */,
+				1816570E1B3B7D63007A9387 /* OTMConstants.swift */,
+				18EE6B171B3C7DA400B7F151 /* OTMConvenience.swift */,
+				18EE6B151B3B9C6A00B7F151 /* OTMUdacity.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		18EE6B191B3C9CEC00B7F151 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18EE6B1F1B3CB55600B7F151 /* Bolts.framework */,
+				18EE6B1D1B3CB51A00B7F151 /* FBSDKLoginKit.framework */,
+				18EE6B1A1B3C9CF800B7F151 /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		181656E41B3B6FBD007A9387 /* OnTheMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181657041B3B6FBD007A9387 /* Build configuration list for PBXNativeTarget "OnTheMap" */;
+			buildPhases = (
+				181656E11B3B6FBD007A9387 /* Sources */,
+				181656E21B3B6FBD007A9387 /* Frameworks */,
+				181656E31B3B6FBD007A9387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnTheMap;
+			productName = OnTheMap;
+			productReference = 181656E51B3B6FBD007A9387 /* OnTheMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		181656F91B3B6FBD007A9387 /* OnTheMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181657071B3B6FBD007A9387 /* Build configuration list for PBXNativeTarget "OnTheMapTests" */;
+			buildPhases = (
+				181656F61B3B6FBD007A9387 /* Sources */,
+				181656F71B3B6FBD007A9387 /* Frameworks */,
+				181656F81B3B6FBD007A9387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				181656FC1B3B6FBD007A9387 /* PBXTargetDependency */,
+			);
+			name = OnTheMapTests;
+			productName = OnTheMapTests;
+			productReference = 181656FA1B3B6FBD007A9387 /* OnTheMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		181656DD1B3B6FBD007A9387 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Julius Danek";
+				TargetAttributes = {
+					181656E41B3B6FBD007A9387 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					181656F91B3B6FBD007A9387 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 181656E41B3B6FBD007A9387;
+					};
+				};
+			};
+			buildConfigurationList = 181656E01B3B6FBD007A9387 /* Build configuration list for PBXProject "OnTheMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 181656DC1B3B6FBD007A9387;
+			productRefGroup = 181656E61B3B6FBD007A9387 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				181656E41B3B6FBD007A9387 /* OnTheMap */,
+				181656F91B3B6FBD007A9387 /* OnTheMapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		181656E31B3B6FBD007A9387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181656F01B3B6FBD007A9387 /* Main.storyboard in Resources */,
+				181656F51B3B6FBD007A9387 /* LaunchScreen.xib in Resources */,
+				181656F21B3B6FBD007A9387 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181656F81B3B6FBD007A9387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		181656E11B3B6FBD007A9387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181656ED1B3B6FBD007A9387 /* LogInVC.swift in Sources */,
+				1816570D1B3B767F007A9387 /* OTMClient.swift in Sources */,
+				1816570F1B3B7D63007A9387 /* OTMConstants.swift in Sources */,
+				18EE6B161B3B9C6A00B7F151 /* OTMUdacity.swift in Sources */,
+				18EE6B181B3C7DA400B7F151 /* OTMConvenience.swift in Sources */,
+				181656EB1B3B6FBD007A9387 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181656F61B3B6FBD007A9387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181657011B3B6FBD007A9387 /* OnTheMapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		181656FC1B3B6FBD007A9387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 181656E41B3B6FBD007A9387 /* OnTheMap */;
+			targetProxy = 181656FB1B3B6FBD007A9387 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		181656EE1B3B6FBD007A9387 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181656EF1B3B6FBD007A9387 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		181656F31B3B6FBD007A9387 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181656F41B3B6FBD007A9387 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		181657021B3B6FBD007A9387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		181657031B3B6FBD007A9387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		181657051B3B6FBD007A9387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/apple/Documents/Portfolio/iOS/FacebookSDK,
+				);
+				INFOPLIST_FILE = OnTheMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap/fb-bridge-header.h";
+			};
+			name = Debug;
+		};
+		181657061B3B6FBD007A9387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/apple/Documents/Portfolio/iOS/FacebookSDK,
+				);
+				INFOPLIST_FILE = OnTheMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap/fb-bridge-header.h";
+			};
+			name = Release;
+		};
+		181657081B3B6FBD007A9387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OnTheMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnTheMap.app/OnTheMap";
+			};
+			name = Debug;
+		};
+		181657091B3B6FBD007A9387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OnTheMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnTheMap.app/OnTheMap";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		181656E01B3B6FBD007A9387 /* Build configuration list for PBXProject "OnTheMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181657021B3B6FBD007A9387 /* Debug */,
+				181657031B3B6FBD007A9387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181657041B3B6FBD007A9387 /* Build configuration list for PBXNativeTarget "OnTheMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181657051B3B6FBD007A9387 /* Debug */,
+				181657061B3B6FBD007A9387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181657071B3B6FBD007A9387 /* Build configuration list for PBXNativeTarget "OnTheMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181657081B3B6FBD007A9387 /* Debug */,
+				181657091B3B6FBD007A9387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 181656DD1B3B6FBD007A9387 /* Project object */;
+}
