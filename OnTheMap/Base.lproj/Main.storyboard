@@ -9,7 +9,7 @@
         <!--Log InVC-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="LogInVC" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="vXZ-lx-hvc" customClass="LogInVC" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -63,6 +63,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKV-og-JvQ" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="tintColor" red="0.94509803920000002" green="0.47450980390000003" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,26 +126,26 @@
                                 <exclude reference="e8a-Jd-aVb"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="6Tb-o3-cDD"/>
-                                <exclude reference="fUz-fy-LKP"/>
-                                <exclude reference="7pL-KF-1If"/>
-                                <exclude reference="Ihb-ei-TyZ"/>
-                                <exclude reference="dx4-ze-rXz"/>
-                                <exclude reference="yvQ-hk-UT6"/>
                                 <exclude reference="6du-2i-XKR"/>
                                 <exclude reference="IGr-hY-1qh"/>
                                 <exclude reference="dXg-Wc-0CK"/>
                                 <exclude reference="mOe-KL-ekf"/>
                                 <exclude reference="oUR-VH-zyY"/>
                                 <exclude reference="tXh-Nw-dFn"/>
-                                <exclude reference="m8p-0Q-VeV"/>
+                                <exclude reference="q37-u2-6IF"/>
+                                <exclude reference="7pL-KF-1If"/>
+                                <exclude reference="Ihb-ei-TyZ"/>
                                 <exclude reference="1g9-F2-csO"/>
                                 <exclude reference="C3w-Sv-M8p"/>
                                 <exclude reference="FHh-68-qwx"/>
+                                <exclude reference="dx4-ze-rXz"/>
+                                <exclude reference="yvQ-hk-UT6"/>
+                                <exclude reference="m8p-0Q-VeV"/>
                                 <exclude reference="AeL-h2-nYQ"/>
                                 <exclude reference="BKX-2P-Ocq"/>
                                 <exclude reference="FeN-EP-mkt"/>
-                                <exclude reference="q37-u2-6IF"/>
+                                <exclude reference="6Tb-o3-cDD"/>
+                                <exclude reference="fUz-fy-LKP"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -158,26 +159,26 @@
                                 <include reference="e8a-Jd-aVb"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="6Tb-o3-cDD"/>
-                                <include reference="fUz-fy-LKP"/>
-                                <include reference="7pL-KF-1If"/>
-                                <include reference="Ihb-ei-TyZ"/>
-                                <include reference="dx4-ze-rXz"/>
-                                <include reference="yvQ-hk-UT6"/>
                                 <include reference="6du-2i-XKR"/>
                                 <include reference="IGr-hY-1qh"/>
                                 <include reference="dXg-Wc-0CK"/>
                                 <include reference="mOe-KL-ekf"/>
                                 <include reference="oUR-VH-zyY"/>
                                 <include reference="tXh-Nw-dFn"/>
-                                <include reference="m8p-0Q-VeV"/>
+                                <include reference="q37-u2-6IF"/>
+                                <include reference="7pL-KF-1If"/>
+                                <include reference="Ihb-ei-TyZ"/>
                                 <include reference="1g9-F2-csO"/>
                                 <include reference="C3w-Sv-M8p"/>
                                 <include reference="FHh-68-qwx"/>
+                                <include reference="dx4-ze-rXz"/>
+                                <include reference="yvQ-hk-UT6"/>
+                                <include reference="m8p-0Q-VeV"/>
                                 <include reference="AeL-h2-nYQ"/>
                                 <include reference="BKX-2P-Ocq"/>
                                 <include reference="FeN-EP-mkt"/>
-                                <include reference="q37-u2-6IF"/>
+                                <include reference="6Tb-o3-cDD"/>
+                                <include reference="fUz-fy-LKP"/>
                             </mask>
                         </variation>
                     </view>
@@ -185,11 +186,13 @@
                         <outlet property="emailText" destination="mjx-zt-42A" id="6vI-ZT-ta5"/>
                         <outlet property="errorLabel" destination="e8a-Jd-aVb" id="knn-9D-rlK"/>
                         <outlet property="facebookLogin" destination="vKV-og-JvQ" id="uMI-Xt-GGb"/>
+                        <outlet property="loginButton" destination="jpg-4P-rkc" id="Hj9-B2-xsg"/>
                         <outlet property="passwordText" destination="0Q5-UJ-Jux" id="5HT-Wx-BGU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-177" y="355"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="A6W-tk-MAQ">
@@ -200,8 +203,51 @@
                         <viewControllerLayoutGuide type="bottom" id="Fd2-CX-uFd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PYu-kV-wE3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qYD-Ml-cOv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableCell" id="4uW-Qa-ikv">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4uW-Qa-ikv" id="d4f-Ty-LnU">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="qYD-Ml-cOv" secondAttribute="trailing" constant="-16" id="6Z1-81-gvU"/>
+                            <constraint firstItem="qYD-Ml-cOv" firstAttribute="bottom" secondItem="PYu-kV-wE3" secondAttribute="bottomMargin" id="GbY-rE-34W"/>
+                            <constraint firstItem="qYD-Ml-cOv" firstAttribute="top" secondItem="PYu-kV-wE3" secondAttribute="topMargin" id="hA0-fF-LBU"/>
+                            <constraint firstItem="qYD-Ml-cOv" firstAttribute="leading" secondItem="PYu-kV-wE3" secondAttribute="leadingMargin" constant="-16" id="mjz-VI-c6l"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qYD-Ml-cOv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6Z1-81-gvU"/>
+                                <exclude reference="GbY-rE-34W"/>
+                                <exclude reference="hA0-fF-LBU"/>
+                                <exclude reference="mjz-VI-c6l"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qYD-Ml-cOv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6Z1-81-gvU"/>
+                                <include reference="GbY-rE-34W"/>
+                                <include reference="hA0-fF-LBU"/>
+                                <include reference="mjz-VI-c6l"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="wev-27-ckR"/>
                 </viewController>
@@ -212,25 +258,84 @@
         <!--Item 1-->
         <scene sceneID="EFT-so-uyS">
             <objects>
-                <viewController id="Q3l-r1-1za" sceneMemberID="viewController">
+                <viewController id="Q3l-r1-1za" customClass="MapView" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tka-aJ-Z4Q"/>
                         <viewControllerLayoutGuide type="bottom" id="ntU-WU-0DX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zPB-lc-u5W">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6wa-GZ-qAF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6wa-GZ-qAF" firstAttribute="bottom" secondItem="zPB-lc-u5W" secondAttribute="bottomMargin" id="WAJ-bN-jPY"/>
+                            <constraint firstItem="6wa-GZ-qAF" firstAttribute="top" secondItem="zPB-lc-u5W" secondAttribute="topMargin" id="eTQ-xC-RMX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6wa-GZ-qAF" secondAttribute="trailing" constant="-16" id="sYn-WU-RdR"/>
+                            <constraint firstItem="6wa-GZ-qAF" firstAttribute="leading" secondItem="zPB-lc-u5W" secondAttribute="leadingMargin" constant="-16" id="uqA-pj-2z0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6wa-GZ-qAF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="WAJ-bN-jPY"/>
+                                <exclude reference="eTQ-xC-RMX"/>
+                                <exclude reference="sYn-WU-RdR"/>
+                                <exclude reference="uqA-pj-2z0"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="6wa-GZ-qAF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="WAJ-bN-jPY"/>
+                                <include reference="eTQ-xC-RMX"/>
+                                <include reference="sYn-WU-RdR"/>
+                                <include reference="uqA-pj-2z0"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="7c8-MN-uyW"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xac-9c-M8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2217" y="-48"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="SzY-sm-azW">
+            <objects>
+                <navigationController storyboardIdentifier="main" id="JgR-93-LjU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e01-cf-cNx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yN5-TS-7gg" kind="relationship" relationship="rootViewController" id="XZO-Y7-9zW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MH2-b6-whU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541.5" y="355"/>
+        </scene>
+        <!--Tab Bar Setup-->
         <scene sceneID="LTb-I6-fE2">
             <objects>
-                <tabBarController storyboardIdentifier="mainMenu" id="yN5-TS-7gg" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainMenu" id="yN5-TS-7gg" customClass="TabBarSetup" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1B2-bg-VM1">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="HfX-mD-BO6">
+                            <connections>
+                                <action selector="LogOut:" destination="yN5-TS-7gg" id="50J-cO-Oyt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="fdx-PV-LQS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -238,6 +343,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <outlet property="logoutButton" destination="HfX-mD-BO6" id="rGf-Hn-12o"/>
                         <segue destination="Q3l-r1-1za" kind="relationship" relationship="viewControllers" id="Ufx-AA-PTG"/>
                         <segue destination="Eeh-Yx-f7l" kind="relationship" relationship="viewControllers" id="kCt-HP-dyN"/>
                     </connections>

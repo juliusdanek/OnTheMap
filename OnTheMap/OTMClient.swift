@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class OTMClient: NSObject {
     
@@ -21,10 +23,19 @@ class OTMClient: NSObject {
     
     var accountID: String? = nil
     
+    //Bool to check whether to log-in was performed with facebook or not
+    var FBLogin: Bool = false
+    var loginManager = FBSDKLoginManager()
+
+    
     //User info
     
     var userFirstName: String? = nil
     var userLastName: String? = nil
+    
+    //array with student data
+    
+    var studentData = [String : StudentInformation]()
     
     //
     
@@ -56,6 +67,18 @@ class OTMClient: NSObject {
         } else {
             completionHandler(result: parsedResult, error: nil)
         }
+    }
+    
+    //Helper: to convert updated time into time interval --> to check what the most recent update was
+    func timeConversion(date: String) -> NSTimeInterval {
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        
+        var dateAsNSDATE = dateFormatter.dateFromString(date)
+        
+        return dateAsNSDATE!.timeIntervalSince1970
+        
     }
     
     class func sharedInstance() -> OTMClient {

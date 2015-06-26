@@ -16,13 +16,43 @@ class LogInVC: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var facebookLogin: FBSDKLoginButton!
+    @IBOutlet weak var loginButton: UIButton!
     
+    func hide () {
+        emailText.hidden = true
+        passwordText.hidden = true
+        facebookLogin.hidden = true
+        loginButton.hidden = true
+    }
+    
+    func show () {
+        emailText.hidden = false
+        passwordText.hidden = false
+        facebookLogin.hidden = false
+        loginButton.hidden = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if (FBSDKAccessToken.currentAccessToken() != nil) {
-//            completeLogin()
+            
+            hide()
+            
+            errorLabel.text = "Logging in with Facebook..."
+            
+            let body: [String: AnyObject] = ["facebook_mobile": ["access_token" : FBSDKAccessToken.currentAccessToken().tokenString]]
+            
+            OTMClient.sharedInstance().udacityLogIn(body, completitionHandler: {success, error in
+                if success {
+                    // if login successful, perform segue
+                    self.completeLogin(true)
+                } else {
+                    // else display error message with error from handler (whether bad network or credentials)
+                    self.displayError(error)                    
+                }
+                
+            })
             // User is already logged in, do work such as go to next view controller.
         } else {
             facebookLogin.readPermissions = ["public_profile", "email", "user_friends"]
@@ -47,7 +77,7 @@ class LogInVC: UIViewController, FBSDKLoginButtonDelegate {
         OTMClient.sharedInstance().udacityLogIn(body, completitionHandler: {success, error in
             if success {
                 // if login successful, perform segue
-                self.completeLogin()
+                self.completeLogin(false)
             } else {
                 // else display error message with error from handler (whether bad network or credentials)
                 self.displayError(error)
@@ -58,16 +88,20 @@ class LogInVC: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     //complete login
-    func completeLogin() {
+    func completeLogin(FB: Bool) {
         dispatch_async(dispatch_get_main_queue(), {
             self.errorLabel.text = ""
-            let controller = self.storyboard!.instantiateViewControllerWithIdentifier("mainMenu") as! UITabBarController
+            if FB {
+                OTMClient.sharedInstance().FBLogin = true
+            }
+            let controller = self.storyboard!.instantiateViewControllerWithIdentifier("main") as! UINavigationController
             self.presentViewController(controller, animated: true, completion: nil)
         })
     }
     
     func displayError(errorString: String?) {
         dispatch_async(dispatch_get_main_queue(), {
+            self.show()
             self.errorLabel.text = ""
             if let errorString = errorString {
                 //instantiate alert View
@@ -99,14 +133,16 @@ class LogInVC: UIViewController, FBSDKLoginButtonDelegate {
                 // should check if specific permissions missing
                 if result.grantedPermissions.contains("email"){
                     
-                    facebookLogin.hidden = true
+                    self.errorLabel.text = "Logging in with Facebook..."
+                        
+                    hide()
 
                     let body: [String: AnyObject] = ["facebook_mobile": ["access_token" : FBSDKAccessToken.currentAccessToken().tokenString]]
                     
                     OTMClient.sharedInstance().udacityLogIn(body, completitionHandler: {success, error in
                         if success {
                             // if login successful, perform segue
-                            self.completeLogin()
+                            self.completeLogin(true)
                         } else {
                             // else display error message with error from handler (whether bad network or credentials)
                             self.displayError(error)

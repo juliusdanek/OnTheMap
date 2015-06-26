@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 extension OTMClient {
 
     func udacitySessionPOST (HTTTPBody: [String: AnyObject], completitionHandler: (success: Bool, accountID: String?, errorString: String?) -> Void) {
@@ -24,18 +25,14 @@ extension OTMClient {
         
         //initialize task
         let task = session.dataTaskWithRequest(request) {data, response, downloadError in
-            
             if let error = downloadError {
                 completitionHandler(success: false, accountID: nil, errorString: "No network connection")
             } else {
                 let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5))
                 OTMClient.parseJSONWithCompletionHandler(newData, completionHandler: {result, error in
                     if let dataResult: NSDictionary = result as? NSDictionary {
-                        
                         if let accountCheck: AnyObject = dataResult.objectForKey(udacity.JSONResponseKeys.account) {
-                            
                             if let accountID = accountCheck[udacity.JSONResponseKeys.accountKey] as? String {
-                                
                                 //assign accountID to value stored in Client
 //                                self.accountID = accountID as? String
                                 completitionHandler(success: true, accountID: accountID, errorString: nil)
@@ -86,30 +83,40 @@ extension OTMClient {
                 })
             }
         }
-        
         task.resume()
+    }
         
+    func facebookLogout () {
+        loginManager.logOut()
+        println("logged out of facebook")
     }
     
-    
-//    let request = NSMutableURLRequest(URL: NSURL(string: "https://www.udacity.com/api/users/3903878747")!)
-//    
-//    let session = NSURLSession.sharedSession()
-//    
-//    let task = session.dataTaskWithRequest(request) { data, response, error in
-//        
-//        if error != nil { // Handle error...
-//            
-//            return
-//            
-//        }
-//        
-//        let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5)) /* subset response data! */
-//        
-//        println(NSString(data: newData, encoding: NSUTF8StringEncoding))
-//        
-//    }
-//    
-//    task.resume()
-    
+    func udacityLogout () {
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: "https://www.udacity.com/api/session")!)
+        request.HTTPMethod = "DELETE"
+        
+        var xsrfCookie: NSHTTPCookie? = nil
+        
+        let sharedCookieStorage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+        
+        for cookie in sharedCookieStorage.cookies as! [NSHTTPCookie] {
+            if cookie.name == "XSRF-TOKEN" { xsrfCookie = cookie }
+        }
+        
+        if let xsrfCookie = xsrfCookie {
+            request.addValue(xsrfCookie.value!, forHTTPHeaderField: "X-XSRF-Token")
+        }
+        
+        let session = NSURLSession.sharedSession()
+        
+        let task = session.dataTaskWithRequest(request) { data, response, error in
+            if error != nil { // Handle error…
+                return
+            }
+            let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5)) /* subset response data! */
+            println(NSString(data: newData, encoding: NSUTF8StringEncoding))
+        }
+        task.resume()
+    }
 }

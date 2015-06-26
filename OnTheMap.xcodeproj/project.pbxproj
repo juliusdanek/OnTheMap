@@ -15,6 +15,12 @@
 		181657011B3B6FBD007A9387 /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181657001B3B6FBD007A9387 /* OnTheMapTests.swift */; };
 		1816570D1B3B767F007A9387 /* OTMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816570C1B3B767F007A9387 /* OTMClient.swift */; };
 		1816570F1B3B7D63007A9387 /* OTMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816570E1B3B7D63007A9387 /* OTMConstants.swift */; };
+		18845F461B3CC81D0095C4A1 /* TabBarSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18845F451B3CC81D0095C4A1 /* TabBarSetup.swift */; };
+		18845F4C1B3DB0BC0095C4A1 /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18845F4B1B3DB0BC0095C4A1 /* StudentInformation.swift */; };
+		18845F4E1B3DB38E0095C4A1 /* OTMParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18845F4D1B3DB38E0095C4A1 /* OTMParse.swift */; };
+		18845F501B3DC9110095C4A1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18845F4F1B3DC9110095C4A1 /* MapView.swift */; };
+		18845F521B3DC9560095C4A1 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18845F511B3DC9560095C4A1 /* TableView.swift */; };
+		18845F561B3DCA7D0095C4A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18845F551B3DCA7D0095C4A1 /* MapKit.framework */; };
 		18EE6B161B3B9C6A00B7F151 /* OTMUdacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE6B151B3B9C6A00B7F151 /* OTMUdacity.swift */; };
 		18EE6B181B3C7DA400B7F151 /* OTMConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE6B171B3C7DA400B7F151 /* OTMConvenience.swift */; };
 		18EE6B1B1B3C9CF800B7F151 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EE6B1A1B3C9CF800B7F151 /* FBSDKCoreKit.framework */; };
@@ -45,10 +51,15 @@
 		181657001B3B6FBD007A9387 /* OnTheMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTests.swift; sourceTree = "<group>"; };
 		1816570C1B3B767F007A9387 /* OTMClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMClient.swift; sourceTree = "<group>"; };
 		1816570E1B3B7D63007A9387 /* OTMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMConstants.swift; sourceTree = "<group>"; };
+		18845F451B3CC81D0095C4A1 /* TabBarSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarSetup.swift; sourceTree = "<group>"; };
+		18845F4B1B3DB0BC0095C4A1 /* StudentInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
+		18845F4D1B3DB38E0095C4A1 /* OTMParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMParse.swift; sourceTree = "<group>"; };
+		18845F4F1B3DC9110095C4A1 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		18845F511B3DC9560095C4A1 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		18845F551B3DCA7D0095C4A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		18EE6B151B3B9C6A00B7F151 /* OTMUdacity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMUdacity.swift; sourceTree = "<group>"; };
 		18EE6B171B3C7DA400B7F151 /* OTMConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMConvenience.swift; sourceTree = "<group>"; };
 		18EE6B1A1B3C9CF800B7F151 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		18EE6B1C1B3CB1BD00B7F151 /* fb-bridge-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fb-bridge-header.h"; sourceTree = "<group>"; };
 		18EE6B1D1B3CB51A00B7F151 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		18EE6B1F1B3CB55600B7F151 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +71,7 @@
 			files = (
 				18EE6B201B3CB55600B7F151 /* Bolts.framework in Frameworks */,
 				18EE6B1E1B3CB51A00B7F151 /* FBSDKLoginKit.framework in Frameworks */,
+				18845F561B3DCA7D0095C4A1 /* MapKit.framework in Frameworks */,
 				18EE6B1B1B3C9CF800B7F151 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +89,7 @@
 		181656DC1B3B6FBD007A9387 = {
 			isa = PBXGroup;
 			children = (
+				18845F551B3DCA7D0095C4A1 /* MapKit.framework */,
 				181656E71B3B6FBD007A9387 /* OnTheMap */,
 				181656FD1B3B6FBD007A9387 /* OnTheMapTests */,
 				181656E61B3B6FBD007A9387 /* Products */,
@@ -95,7 +108,6 @@
 		181656E71B3B6FBD007A9387 /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				18EE6B1C1B3CB1BD00B7F151 /* fb-bridge-header.h */,
 				18EE6B191B3C9CEC00B7F151 /* Frameworks */,
 				1816570B1B3B7611007A9387 /* Model */,
 				181656EA1B3B6FBD007A9387 /* AppDelegate.swift */,
@@ -137,6 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				181656EC1B3B6FBD007A9387 /* LogInVC.swift */,
+				18845F451B3CC81D0095C4A1 /* TabBarSetup.swift */,
+				18845F4F1B3DC9110095C4A1 /* MapView.swift */,
+				18845F511B3DC9560095C4A1 /* TableView.swift */,
 			);
 			name = VCs;
 			sourceTree = "<group>";
@@ -144,12 +159,30 @@
 		1816570B1B3B7611007A9387 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18845F4A1B3DB0A50095C4A1 /* Data */,
+				18845F491B3DB08F0095C4A1 /* Network */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		18845F491B3DB08F0095C4A1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
 				1816570C1B3B767F007A9387 /* OTMClient.swift */,
 				1816570E1B3B7D63007A9387 /* OTMConstants.swift */,
+				18845F4D1B3DB38E0095C4A1 /* OTMParse.swift */,
 				18EE6B171B3C7DA400B7F151 /* OTMConvenience.swift */,
 				18EE6B151B3B9C6A00B7F151 /* OTMUdacity.swift */,
 			);
-			name = Model;
+			name = Network;
+			sourceTree = "<group>";
+		};
+		18845F4A1B3DB0A50095C4A1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				18845F4B1B3DB0BC0095C4A1 /* StudentInformation.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		18EE6B191B3C9CEC00B7F151 /* Frameworks */ = {
@@ -211,6 +244,11 @@
 				TargetAttributes = {
 					181656E41B3B6FBD007A9387 = {
 						CreatedOnToolsVersion = 6.3.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					181656F91B3B6FBD007A9387 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -262,11 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18845F4C1B3DB0BC0095C4A1 /* StudentInformation.swift in Sources */,
 				181656ED1B3B6FBD007A9387 /* LogInVC.swift in Sources */,
 				1816570D1B3B767F007A9387 /* OTMClient.swift in Sources */,
 				1816570F1B3B7D63007A9387 /* OTMConstants.swift in Sources */,
 				18EE6B161B3B9C6A00B7F151 /* OTMUdacity.swift in Sources */,
+				18845F461B3CC81D0095C4A1 /* TabBarSetup.swift in Sources */,
 				18EE6B181B3C7DA400B7F151 /* OTMConvenience.swift in Sources */,
+				18845F501B3DC9110095C4A1 /* MapView.swift in Sources */,
+				18845F4E1B3DB38E0095C4A1 /* OTMParse.swift in Sources */,
+				18845F521B3DC9560095C4A1 /* TableView.swift in Sources */,
 				181656EB1B3B6FBD007A9387 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +444,7 @@
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap/fb-bridge-header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -416,7 +459,7 @@
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap/fb-bridge-header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
