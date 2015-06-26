@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="-177" y="355"/>
         </scene>
-        <!--Item 2-->
+        <!--TableView-->
         <scene sceneID="A6W-tk-MAQ">
             <objects>
-                <viewController id="Eeh-Yx-f7l" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tableView" title="TableView" id="Eeh-Yx-f7l" customClass="TableView" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OpZ-pX-aG9"/>
                         <viewControllerLayoutGuide type="bottom" id="Fd2-CX-uFd"/>
@@ -217,24 +217,28 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Eeh-Yx-f7l" id="xrY-WI-Aqu"/>
+                                    <outlet property="delegate" destination="Eeh-Yx-f7l" id="94c-cD-R1c"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="qYD-Ml-cOv" secondAttribute="trailing" constant="-16" id="6Z1-81-gvU"/>
-                            <constraint firstItem="qYD-Ml-cOv" firstAttribute="bottom" secondItem="PYu-kV-wE3" secondAttribute="bottomMargin" id="GbY-rE-34W"/>
-                            <constraint firstItem="qYD-Ml-cOv" firstAttribute="top" secondItem="PYu-kV-wE3" secondAttribute="topMargin" id="hA0-fF-LBU"/>
-                            <constraint firstItem="qYD-Ml-cOv" firstAttribute="leading" secondItem="PYu-kV-wE3" secondAttribute="leadingMargin" constant="-16" id="mjz-VI-c6l"/>
+                            <constraint firstAttribute="trailing" secondItem="qYD-Ml-cOv" secondAttribute="trailing" id="KSE-ke-ccO"/>
+                            <constraint firstItem="qYD-Ml-cOv" firstAttribute="bottom" secondItem="Fd2-CX-uFd" secondAttribute="top" id="N73-ts-yJl"/>
+                            <constraint firstItem="qYD-Ml-cOv" firstAttribute="top" secondItem="OpZ-pX-aG9" secondAttribute="bottom" id="PbR-kw-HAP"/>
+                            <constraint firstItem="qYD-Ml-cOv" firstAttribute="leading" secondItem="PYu-kV-wE3" secondAttribute="leading" id="V2Q-5Y-ZZk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="qYD-Ml-cOv"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="6Z1-81-gvU"/>
-                                <exclude reference="GbY-rE-34W"/>
-                                <exclude reference="hA0-fF-LBU"/>
-                                <exclude reference="mjz-VI-c6l"/>
+                                <exclude reference="KSE-ke-ccO"/>
+                                <exclude reference="N73-ts-yJl"/>
+                                <exclude reference="PbR-kw-HAP"/>
+                                <exclude reference="V2Q-5Y-ZZk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -242,23 +246,26 @@
                                 <include reference="qYD-Ml-cOv"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="6Z1-81-gvU"/>
-                                <include reference="GbY-rE-34W"/>
-                                <include reference="hA0-fF-LBU"/>
-                                <include reference="mjz-VI-c6l"/>
+                                <include reference="KSE-ke-ccO"/>
+                                <include reference="N73-ts-yJl"/>
+                                <include reference="PbR-kw-HAP"/>
+                                <include reference="V2Q-5Y-ZZk"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="wev-27-ckR"/>
+                    <connections>
+                        <outlet property="tableView" destination="qYD-Ml-cOv" id="Yqy-RK-JfN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8s-7N-k49" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2217" y="614"/>
         </scene>
-        <!--Item 1-->
+        <!--MapView-->
         <scene sceneID="EFT-so-uyS">
             <objects>
-                <viewController id="Q3l-r1-1za" customClass="MapView" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MapView" id="Q3l-r1-1za" customClass="MapView" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tka-aJ-Z4Q"/>
                         <viewControllerLayoutGuide type="bottom" id="ntU-WU-0DX"/>
@@ -266,40 +273,7 @@
                     <view key="view" contentMode="scaleToFill" id="zPB-lc-u5W">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6wa-GZ-qAF">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6wa-GZ-qAF" firstAttribute="bottom" secondItem="zPB-lc-u5W" secondAttribute="bottomMargin" id="WAJ-bN-jPY"/>
-                            <constraint firstItem="6wa-GZ-qAF" firstAttribute="top" secondItem="zPB-lc-u5W" secondAttribute="topMargin" id="eTQ-xC-RMX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6wa-GZ-qAF" secondAttribute="trailing" constant="-16" id="sYn-WU-RdR"/>
-                            <constraint firstItem="6wa-GZ-qAF" firstAttribute="leading" secondItem="zPB-lc-u5W" secondAttribute="leadingMargin" constant="-16" id="uqA-pj-2z0"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="6wa-GZ-qAF"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="WAJ-bN-jPY"/>
-                                <exclude reference="eTQ-xC-RMX"/>
-                                <exclude reference="sYn-WU-RdR"/>
-                                <exclude reference="uqA-pj-2z0"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="6wa-GZ-qAF"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="WAJ-bN-jPY"/>
-                                <include reference="eTQ-xC-RMX"/>
-                                <include reference="sYn-WU-RdR"/>
-                                <include reference="uqA-pj-2z0"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="7c8-MN-uyW"/>
                     <toolbarItems/>

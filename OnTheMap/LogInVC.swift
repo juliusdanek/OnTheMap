@@ -10,7 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class LogInVC: UIViewController, FBSDKLoginButtonDelegate {
+class LogInVC: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
@@ -32,8 +32,23 @@ class LogInVC: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.hidden = false
     }
     
+    //allow to enter info by keyboard only
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == emailText {
+            textField.resignFirstResponder()
+            passwordText.becomeFirstResponder()
+        } else if textField == passwordText {
+            loginButton.sendActionsForControlEvents(UIControlEvents.TouchUpInside)
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailText.delegate = self
+        passwordText.delegate = self
         
         if (FBSDKAccessToken.currentAccessToken() != nil) {
             

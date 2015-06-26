@@ -20,8 +20,7 @@ struct StudentInformation {
     var mediaURL: String?
     
     var uniqueKey: String
-    var updatedAt: String
-    var updatedAtTI: NSTimeInterval
+    var updatedAt: NSDate
     
     init (studentDict: [String: AnyObject]) {
         
@@ -33,8 +32,7 @@ struct StudentInformation {
         self.locationString = studentDict["mapString"] as! String
         self.mediaURL = studentDict["mediaURL"] as? String
         self.uniqueKey = studentDict["uniqueKey"] as! String
-        self.updatedAt = studentDict["updatedAt"] as! String
-        self.updatedAtTI = OTMClient.sharedInstance().timeConversion(studentDict["updatedAt"] as! String)
+        self.updatedAt = OTMClient.sharedInstance().timeConversion(studentDict["updatedAt"] as! String)
         
     }
     

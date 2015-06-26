@@ -24,25 +24,8 @@ extension OTMClient {
                     if let dataResult = result as? [String: AnyObject] {
                         if let dataArray = dataResult["results"] as? [[String: AnyObject]] {
                             for element in dataArray {
-                                //Mark: Even though student data is downloaded by date of creation, I want to make sure by double checking timestamps that I only have the most up to date info
-                                let studentID = element["uniqueKey"] as! String
-                                let timeStamp = OTMClient.sharedInstance().timeConversion(element["updatedAt"] as! String)
-                                if let currentEntry = OTMClient.sharedInstance().studentData[studentID] {
-//                                    println(timeStamp, element["updatedAt"])
-//                                    println(currentEntry.updatedAtTI, currentEntry.updatedAt)
-                                    if timeStamp > currentEntry.updatedAtTI {
-                                        let studentObject = StudentInformation(studentDict: element)
-                                        OTMClient.sharedInstance().studentData[studentID] = studentObject
-//                                        println("student location updated!")
-                                    } else {
-//                                        println("student location was older")
-                                    }
-                                } else {
-                                    let studentObject = StudentInformation(studentDict: element)
-                                    OTMClient.sharedInstance().studentData[studentID] = studentObject
-//                                    println("new student added")
-                                }
-//                                println(OTMClient.sharedInstance().studentData)
+                                let studentObject = StudentInformation(studentDict: element)
+                                OTMClient.sharedInstance().studentData.append(studentObject)
                             }
                             completionHandler(success: true, error: nil)
                         }

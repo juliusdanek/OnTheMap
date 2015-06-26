@@ -35,7 +35,7 @@ class OTMClient: NSObject {
     
     //array with student data
     
-    var studentData = [String : StudentInformation]()
+    var studentData = [StudentInformation]()
     
     //
     
@@ -70,14 +70,14 @@ class OTMClient: NSObject {
     }
     
     //Helper: to convert updated time into time interval --> to check what the most recent update was
-    func timeConversion(date: String) -> NSTimeInterval {
+    func timeConversion(date: String) -> NSDate {
         
         var dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         
         var dateAsNSDATE = dateFormatter.dateFromString(date)
         
-        return dateAsNSDATE!.timeIntervalSince1970
+        return dateAsNSDATE!
         
     }
     

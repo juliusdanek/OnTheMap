@@ -58,6 +58,10 @@ class TabBarSetup: UITabBarController {
     func syncButton () {
         OTMClient.sharedInstance().parseGet({success, error in
             //TODO: Present alertview in case download / update fails
+            if success {
+                let dataReloaded = NSNotification(name: "syncButton", object: nil)
+                NSNotificationCenter.defaultCenter().postNotification(dataReloaded)
+            }
         })
     }
     
