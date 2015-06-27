@@ -7,13 +7,15 @@
 //
 
 import Foundation
+import MapKit
 
 struct StudentInformation {
     
-    var latitude: Float
-    var longitude: Float
+    var latitude: CLLocationDegrees
+    var longitude: CLLocationDegrees
     var locationString: String
-    
+    var coordinate: CLLocationCoordinate2D
+
     var firstName: String?
     var lastName: String?
     
@@ -27,14 +29,17 @@ struct StudentInformation {
         //initiallize from JSON object handed down by Parse
         self.firstName = studentDict["firstName"] as? String
         self.lastName = studentDict["lastName"] as? String
-        self.latitude = studentDict["latitude"] as! Float
-        self.longitude = studentDict["longitude"] as! Float
+        self.latitude = CLLocationDegrees(studentDict["latitude"] as! Double)
+        self.longitude = CLLocationDegrees(studentDict["longitude"] as! Double)
         self.locationString = studentDict["mapString"] as! String
         self.mediaURL = studentDict["mediaURL"] as? String
         self.uniqueKey = studentDict["uniqueKey"] as! String
         self.updatedAt = OTMClient.sharedInstance().timeConversion(studentDict["updatedAt"] as! String)
+        self.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         
     }
+    
+    
     
     
 }

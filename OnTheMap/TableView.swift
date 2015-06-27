@@ -33,10 +33,26 @@ class TableView: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let student = OTMClient.sharedInstance().studentData[indexPath.row]
         
         cell.textLabel?.text = (student.firstName! + " " + student.lastName!)
+        cell.detailTextLabel?.text = student.mediaURL
         
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let student = OTMClient.sharedInstance().studentData[indexPath.row]
+        
+        //check whether the string is actually a URL at all or just gibberish
+        if let url = student.mediaURL {
+            if let safariURL = NSURL(string: url) {
+                UIApplication.sharedApplication().openURL(safariURL)
+            }
+        }
+        
+    }
+    
+    
+    //update the table view. Works with a notification from the sync button. Putting reload into the main queue, as in the sync button the data download is in main queue
     func updateTableView () {
         dispatch_async(dispatch_get_main_queue(), {
             self.tableView.reloadData()

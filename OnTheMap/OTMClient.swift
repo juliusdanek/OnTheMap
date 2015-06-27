@@ -24,6 +24,7 @@ class OTMClient: NSObject {
     var accountID: String? = nil
     
     //Bool to check whether to log-in was performed with facebook or not
+    
     var FBLogin: Bool = false
     var loginManager = FBSDKLoginManager()
 
@@ -32,6 +33,8 @@ class OTMClient: NSObject {
     
     var userFirstName: String? = nil
     var userLastName: String? = nil
+    var userObjectID: String? = "r2Qcro0xXj"
+    
     
     //array with student data
     

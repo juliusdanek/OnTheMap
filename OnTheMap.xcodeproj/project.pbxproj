@@ -20,6 +20,8 @@
 		18845F4E1B3DB38E0095C4A1 /* OTMParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18845F4D1B3DB38E0095C4A1 /* OTMParse.swift */; };
 		18845F501B3DC9110095C4A1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18845F4F1B3DC9110095C4A1 /* MapView.swift */; };
 		18845F521B3DC9560095C4A1 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18845F511B3DC9560095C4A1 /* TableView.swift */; };
+		18845F581B3DF6910095C4A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18845F571B3DF6910095C4A1 /* MapKit.framework */; };
+		18845F5A1B3E01CD0095C4A1 /* AddLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18845F591B3E01CD0095C4A1 /* AddLocationVC.swift */; };
 		18EE6B161B3B9C6A00B7F151 /* OTMUdacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE6B151B3B9C6A00B7F151 /* OTMUdacity.swift */; };
 		18EE6B181B3C7DA400B7F151 /* OTMConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE6B171B3C7DA400B7F151 /* OTMConvenience.swift */; };
 		18EE6B1B1B3C9CF800B7F151 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EE6B1A1B3C9CF800B7F151 /* FBSDKCoreKit.framework */; };
@@ -55,6 +57,8 @@
 		18845F4D1B3DB38E0095C4A1 /* OTMParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMParse.swift; sourceTree = "<group>"; };
 		18845F4F1B3DC9110095C4A1 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		18845F511B3DC9560095C4A1 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		18845F571B3DF6910095C4A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		18845F591B3E01CD0095C4A1 /* AddLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationVC.swift; sourceTree = "<group>"; };
 		18EE6B151B3B9C6A00B7F151 /* OTMUdacity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMUdacity.swift; sourceTree = "<group>"; };
 		18EE6B171B3C7DA400B7F151 /* OTMConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMConvenience.swift; sourceTree = "<group>"; };
 		18EE6B1A1B3C9CF800B7F151 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18845F581B3DF6910095C4A1 /* MapKit.framework in Frameworks */,
 				18EE6B201B3CB55600B7F151 /* Bolts.framework in Frameworks */,
 				18EE6B1E1B3CB51A00B7F151 /* FBSDKLoginKit.framework in Frameworks */,
 				18EE6B1B1B3C9CF800B7F151 /* FBSDKCoreKit.framework in Frameworks */,
@@ -86,6 +91,7 @@
 		181656DC1B3B6FBD007A9387 = {
 			isa = PBXGroup;
 			children = (
+				18845F571B3DF6910095C4A1 /* MapKit.framework */,
 				181656E71B3B6FBD007A9387 /* OnTheMap */,
 				181656FD1B3B6FBD007A9387 /* OnTheMapTests */,
 				181656E61B3B6FBD007A9387 /* Products */,
@@ -145,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				181656EC1B3B6FBD007A9387 /* LogInVC.swift */,
+				18845F591B3E01CD0095C4A1 /* AddLocationVC.swift */,
 				18845F451B3CC81D0095C4A1 /* TabBarSetup.swift */,
 				18845F4F1B3DC9110095C4A1 /* MapView.swift */,
 				18845F511B3DC9560095C4A1 /* TableView.swift */,
@@ -305,6 +312,7 @@
 				18EE6B181B3C7DA400B7F151 /* OTMConvenience.swift in Sources */,
 				18845F501B3DC9110095C4A1 /* MapView.swift in Sources */,
 				18845F4E1B3DB38E0095C4A1 /* OTMParse.swift in Sources */,
+				18845F5A1B3E01CD0095C4A1 /* AddLocationVC.swift in Sources */,
 				18845F521B3DC9560095C4A1 /* TableView.swift in Sources */,
 				181656EB1B3B6FBD007A9387 /* AppDelegate.swift in Sources */,
 			);
