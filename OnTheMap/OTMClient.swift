@@ -33,7 +33,7 @@ class OTMClient: NSObject {
     
     var userFirstName: String? = nil
     var userLastName: String? = nil
-    var userObjectID: String? = "r2Qcro0xXj"
+    var userObjectID: String? = nil
     
     
     //array with student data

@@ -10,6 +10,7 @@ import Foundation
 
 extension OTMClient {
     
+    
     func parseGet (completionHandler: (success: Bool, error: String?) -> Void) {
         
         let request = NSMutableURLRequest(URL: NSURL(string: parse.baseURL)!)
@@ -41,6 +42,8 @@ extension OTMClient {
         
         task.resume()
     }
+    
+    //This function has been set up in a way that the user only ever manipulates one object in the parse database. When loading the location addVC, the app checks whether a entry already exists in the database for the user. If it does, it uses that users object ID. If it doesn't, it creates an object ID with the first posting and then uses the received object ID later on for next postings. This does not really work when there already are several entries with an account ID but I am assuming that everybody would use this app. 
     
     func parseLocationUpdate (HTTPMethod: String, HTTPBody: [String: AnyObject], objectID: String?, completionHandler: (success: Bool, error: String?) -> Void) {
         
@@ -90,5 +93,58 @@ extension OTMClient {
             completionHandler(success: false, error: "Couldn't transform the HTTPBody dictionary")
         }
     }
+    
+    //this function only gets called at the beginning of the app, when no objectID for the account has yet been done. This way, the user always only manipulates on object ID.
+    func parseGetObjectId (completionHandler: (success: Bool, objectID: String?) -> Void) {
+        let urlString = "https://api.parse.com/1/classes/StudentLocation?where=%7B%22uniqueKey%22%3A%22\(OTMClient.sharedInstance().accountID!)%22%7D"
         
+        let url = NSURL(string: urlString)
+        let request = NSMutableURLRequest(URL: url!)
+        request.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-Application-Id")
+        request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
+
+        let task = session.dataTaskWithRequest(request) { data, response, error in
+            
+            if error != nil {
+                completionHandler(success: false, objectID: nil)
+            } else {
+                OTMClient.parseJSONWithCompletionHandler(data, completionHandler: {result, error in
+                    if let dataResult = result as? [String: AnyObject]{
+                        if let dataArray = dataResult["results"] as? [[String: AnyObject]]  {
+//                            println("DataArray from server is \(dataArray)")
+                            if dataArray.count != 0 {
+                                if let object = dataArray[0]["objectId"] as? String {
+                                    completionHandler(success: true, objectID: object)
+                                }
+                            }
+                        }
+                    }
+                })
+            }
+        }
+        
+        task.resume()
+    }
+    
+    //MARK: Used this method to delete some of my older entries
+//    func parseDelete () {
+//        let urlString = "https://api.parse.com/1/classes/StudentLocation/r2Qcro0xXj"
+//        let url = NSURL(string: urlString)
+//        let request = NSMutableURLRequest(URL: url!)
+//        request.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-Application-Id")
+//        request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
+//        request.HTTPMethod = "DELETE"
+//        
+//        let task = session.dataTaskWithRequest(request) { data, response, error in
+//            
+//            if error != nil { /* Handle error */ return }
+//            
+//            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+//            
+//        }
+//        
+//        task.resume()
+//
+//    }
+    
 }

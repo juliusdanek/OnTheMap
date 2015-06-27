@@ -70,7 +70,13 @@ class TabBarSetup: UITabBarController {
     func addLocation () {
         performSegueWithIdentifier("showAddLocation", sender: nil)
         if OTMClient.sharedInstance().userObjectID == nil {
-            
+//            OTMClient.sharedInstance().parseDelete()
+            OTMClient.sharedInstance().parseGetObjectId({ (success, objectID) -> Void in
+                if success {
+                    OTMClient.sharedInstance().userObjectID = objectID
+                    println("object id is \(OTMClient.sharedInstance().userObjectID)")
+                }
+            })
         }
     }
     
