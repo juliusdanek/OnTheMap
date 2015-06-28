@@ -16,6 +16,7 @@ class AddLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var actionButton: UIBarButtonItem!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var mapString: String?
     var lat: Double?
@@ -42,6 +43,7 @@ class AddLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     }
     
     func geoCodeString () {
+        activityIndicator.startAnimating()
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(textField.text, completionHandler: {placemarks, error in
             if error != nil {

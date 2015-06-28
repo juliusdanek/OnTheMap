@@ -32,6 +32,15 @@ class LogInVC: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDelegate {
         loginButton.hidden = false
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+            hide()
+        } else {
+            show()
+        }
+    }
+    
     //allow to enter info by keyboard only
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if textField == emailText {

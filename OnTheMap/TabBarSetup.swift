@@ -34,14 +34,12 @@ class TabBarSetup: UITabBarController {
             // if it was facebook, log out of facebook
             if OTMClient.sharedInstance().FBLogin {
                 OTMClient.sharedInstance().facebookLogout()
-                let controller = self.storyboard!.instantiateViewControllerWithIdentifier("login") as! UIViewController
-                self.presentViewController(controller, animated: true, completion: nil)
+                self.dismissViewControllerAnimated(true, completion: nil)
                 println("FB Logout")
             } else {
                 //else logout with udacity
                 OTMClient.sharedInstance().udacityLogout()
-                let controller = self.storyboard!.instantiateViewControllerWithIdentifier("login") as! UIViewController
-                self.presentViewController(controller, animated: true, completion: nil)
+                self.dismissViewControllerAnimated(true, completion: nil)
                 println("UD Logout")
             }
         }))

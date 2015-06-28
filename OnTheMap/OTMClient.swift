@@ -17,6 +17,7 @@ class OTMClient: NSObject {
     override init() {
         session = NSURLSession.sharedSession()
         super.init()
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
     }
     
     //Auth State
