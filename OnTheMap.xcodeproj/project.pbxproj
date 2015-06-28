@@ -151,10 +151,10 @@
 			isa = PBXGroup;
 			children = (
 				181656EC1B3B6FBD007A9387 /* LogInVC.swift */,
-				18845F591B3E01CD0095C4A1 /* AddLocationVC.swift */,
 				18845F451B3CC81D0095C4A1 /* TabBarSetup.swift */,
 				18845F4F1B3DC9110095C4A1 /* MapView.swift */,
 				18845F511B3DC9560095C4A1 /* TableView.swift */,
+				18845F591B3E01CD0095C4A1 /* AddLocationVC.swift */,
 			);
 			name = VCs;
 			sourceTree = "<group>";

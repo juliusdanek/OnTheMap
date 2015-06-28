@@ -43,7 +43,6 @@ class AddLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     }
     
     func geoCodeString () {
-        activityIndicator.startAnimating()
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(textField.text, completionHandler: {placemarks, error in
             if error != nil {
@@ -67,7 +66,6 @@ class AddLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
                 self.mapView.selectAnnotation(pointAnnotation, animated: true)
                 self.mapView.setRegion(mapRegion, animated: true)
                 
-                
                 self.mapString = self.textField.text
                 self.mapView.hidden = false
                 self.textField.text = ""
@@ -77,9 +75,16 @@ class AddLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
                 println("Added annotation to map view")
                 self.topLabel.text = "What are you studying today?"
             }
-            
         })
         
+    }
+    
+    func mapViewWillStartRenderingMap(mapView: MKMapView!) {
+        activityIndicator.startAnimating()
+    }
+    
+    func mapViewDidFinishRenderingMap(mapView: MKMapView!, fullyRendered: Bool) {
+        activityIndicator.stopAnimating()
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
