@@ -461,23 +461,23 @@
                                 <exclude reference="6ns-an-pz1"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="VFX-eD-Ia9"/>
-                                <exclude reference="hG8-88-Q92"/>
-                                <exclude reference="uxC-ub-8Rb"/>
-                                <exclude reference="KmU-sc-n2l"/>
-                                <exclude reference="fhr-1u-Qiv"/>
-                                <exclude reference="vp6-VU-147"/>
                                 <exclude reference="J1N-gR-sFa"/>
                                 <exclude reference="MCC-VE-cBP"/>
                                 <exclude reference="m1Q-uG-gZg"/>
-                                <exclude reference="Cjg-Gd-ZzY"/>
-                                <exclude reference="JLx-r6-woy"/>
-                                <exclude reference="Ljv-m0-9Kf"/>
-                                <exclude reference="Ox6-km-eck"/>
                                 <exclude reference="ibc-x4-g1a"/>
                                 <exclude reference="2q2-e6-dpi"/>
                                 <exclude reference="KV1-Z1-3ei"/>
                                 <exclude reference="ogU-Fb-JyT"/>
+                                <exclude reference="VFX-eD-Ia9"/>
+                                <exclude reference="hG8-88-Q92"/>
+                                <exclude reference="uxC-ub-8Rb"/>
+                                <exclude reference="Cjg-Gd-ZzY"/>
+                                <exclude reference="JLx-r6-woy"/>
+                                <exclude reference="Ljv-m0-9Kf"/>
+                                <exclude reference="Ox6-km-eck"/>
+                                <exclude reference="KmU-sc-n2l"/>
+                                <exclude reference="fhr-1u-Qiv"/>
+                                <exclude reference="vp6-VU-147"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -489,23 +489,23 @@
                                 <include reference="6ns-an-pz1"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="VFX-eD-Ia9"/>
-                                <include reference="hG8-88-Q92"/>
-                                <include reference="uxC-ub-8Rb"/>
-                                <include reference="KmU-sc-n2l"/>
-                                <include reference="fhr-1u-Qiv"/>
-                                <include reference="vp6-VU-147"/>
                                 <include reference="J1N-gR-sFa"/>
                                 <include reference="MCC-VE-cBP"/>
                                 <include reference="m1Q-uG-gZg"/>
-                                <include reference="Cjg-Gd-ZzY"/>
-                                <include reference="JLx-r6-woy"/>
-                                <include reference="Ljv-m0-9Kf"/>
-                                <include reference="Ox6-km-eck"/>
                                 <include reference="ibc-x4-g1a"/>
                                 <include reference="2q2-e6-dpi"/>
                                 <include reference="KV1-Z1-3ei"/>
                                 <include reference="ogU-Fb-JyT"/>
+                                <include reference="VFX-eD-Ia9"/>
+                                <include reference="hG8-88-Q92"/>
+                                <include reference="uxC-ub-8Rb"/>
+                                <include reference="Cjg-Gd-ZzY"/>
+                                <include reference="JLx-r6-woy"/>
+                                <include reference="Ljv-m0-9Kf"/>
+                                <include reference="Ox6-km-eck"/>
+                                <include reference="KmU-sc-n2l"/>
+                                <include reference="fhr-1u-Qiv"/>
+                                <include reference="vp6-VU-147"/>
                             </mask>
                         </variation>
                     </view>
